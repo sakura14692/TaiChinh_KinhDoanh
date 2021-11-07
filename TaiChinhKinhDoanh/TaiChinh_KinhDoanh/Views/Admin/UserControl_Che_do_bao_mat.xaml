@@ -1,0 +1,304 @@
+﻿<UserControl x:Class="TaiChinh_KinhDoanh.Views.Admin.UserControl_Che_do_bao_mat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaiChinh_KinhDoanh.Views.Admin"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.4,1" StartPoint="0.4,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF270D46" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+       
+
+
+
+
+
+
+
+            <Grid
+            Background="Transparent"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            >
+            <Border
+                Width="1000"
+                Height="300"
+                BorderBrush="Aqua"
+                BorderThickness="3"
+                CornerRadius="5"
+                >
+
+                <StackPanel
+                    VerticalAlignment="Center"
+                    Height="250"
+                    Width="950"
+                    
+                    >
+
+
+                    <TextBlock
+                         VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Foreground="Aqua"
+                        FontSize="25"
+                        
+                        >
+                        Hỏi mật khẩu khi khởi động ứng dụng
+                    </TextBlock>
+                    
+                    
+                    
+                    <CheckBox
+                        x:Name="checkBox_Mat_khau_khoi_dong_ung_dung_Bat"
+                       HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                      Foreground="Aqua"
+                        FontSize="18"
+                         Margin="0,0,0,10" Checked="checkBox_Mat_khau_khoi_dong_ung_dung_Bat_Checked"
+                      
+                        
+                        >
+                      Bật
+                    </CheckBox>
+                   
+                    <CheckBox
+                        x:Name="checkBox_Mat_khau_khoi_dong_ung_dung_Tat"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                         Foreground="Aqua"
+                        Margin="0,0,0,10"
+                         FontSize="18" Checked="checkBox_Mat_khau_khoi_dong_ung_dung_Tat_Checked" 
+                        >
+                        Tắt
+                    </CheckBox>
+
+
+                    <TextBlock
+                         VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Foreground="Aqua"
+                        FontSize="25"
+                        
+                        >
+                        Hỏi mật khẩu khi truy cập vào mục 'Thông tin người dùng' và mục 'Chế độ bảo mật'
+                    </TextBlock>
+
+
+                    <CheckBox
+                        x:Name="checkBox_Mat_khau_xem_thong_tin_nguoi_dung_Bat"
+                       HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                      Foreground="Aqua"
+                        FontSize="18"
+                         Margin="0,0,0,10" Checked="checkBox_Mat_khau_xem_thong_tin_nguoi_dung_Bat_Checked" 
+                      
+                        
+                        >
+                        Bật
+                    </CheckBox>
+
+                    <CheckBox
+                        x:Name="checkBox_Mat_khau_xem_thong_tin_nguoi_dung_Tat"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                         Foreground="Aqua"
+                        Margin="0,0,0,10"
+                         FontSize="18" Checked="checkBox_Mat_khau_xem_thong_tin_nguoi_dung_Tat_Checked" Click="checkBox_Mat_khau_xem_thong_tin_nguoi_dung_Tat_Click" 
+                        >
+                        Tắt
+                    </CheckBox>
+
+
+
+
+
+
+
+
+
+
+
+
+                </StackPanel>
+                
+            </Border>
+            
+        </Grid>
+
+
+
+
+        <Grid
+                x:Name="grid_Dang_nhap"
+                Background="Black"
+           
+              
+                
+                
+                
+                >
+
+            <Border
+                    x:Name="border_Dang_nhap"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="400"
+                    Height="200"
+                    BorderThickness="3"
+                    BorderBrush="Aqua"
+                    CornerRadius="5"
+                    
+                    >
+
+                <StackPanel
+                        x:Name="stackpanel_Dang_nhap"
+                        >
+
+
+
+                    <TextBlock
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Foreground="Aqua"
+                            Margin="10"
+                            >
+                            Đăng nhập bằng tài khoản Admin để truy cập chế độ bảo mật
+                    </TextBlock>
+
+                    <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Center"
+                            Width="340"
+                            Height="40"
+                        Grid.Column="1"
+                         Margin="0,5,0,0"
+                    
+                            >
+                        <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                            <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                           
+                               Foreground="Aqua"
+                                Height="20"
+                                    >
+                                   Tài khoản Admin
+                            </TextBlock>
+                            <TextBox
+                            x:Name="textbox_ten_dang_nhap_Admin"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="209"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               
+                                    >
+
+                            </TextBox>
+                        </StackPanel>
+                    </Border>
+
+
+                    <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Center"
+                            Width="340"
+                            Height="40"
+                        Grid.Column="1"
+                         Margin="0,10,0,0"
+                    
+                            >
+                        <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                            <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                           
+                               Foreground="Aqua"
+                                Height="20"
+                                    >
+                                   Mật khẩu Admin
+                            </TextBlock>
+                            <PasswordBox
+                            x:Name="passwordBox_mat_khau_Admin"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="209"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               
+                                    >
+
+                            </PasswordBox>
+                        </StackPanel>
+                    </Border>
+
+
+
+
+                    <Button
+                          
+                            HorizontalAlignment="Center"
+                            Width="100"
+                            Height="30"
+                            Margin="20"
+                            BorderBrush="Aqua"
+                            BorderThickness="3"
+                            Foreground="Aqua" 
+                            IsDefault="True"
+                            Click="Button_Click"
+                            >
+                        Đăng nhập
+                    </Button>
+
+
+
+
+
+
+
+
+                </StackPanel>
+            </Border>
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</UserControl>

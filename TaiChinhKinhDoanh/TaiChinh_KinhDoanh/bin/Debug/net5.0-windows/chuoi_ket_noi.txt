@@ -1,0 +1,1 @@
+Data Source=DESKTOP-O0VE9MN;Initial Catalog=TaiChinhKinhDoanh;Integrated Security=True

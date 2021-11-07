@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Admin\page_Admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\UserControl_Che_do_bao_mat.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\UserControl_Thong_tin_nguoi_dung.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HeThong\page_HeThong.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HeThong\UserControl_HinhAnh.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\message_Box\messageBox_ThongBao_Dang_Nhap_Thanh_Cong.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\message_Box\messageBox_Thuan_Tuy_Thong_Bao.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\message_Box\messageBox_Thuc_thi_Tat_mat_khau_khi_xem_thong_tin_nguoi_dung.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\message_Box\messageBox_Thuc_thi_thay_doi_thong_tin_Admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\message_Box\message_Thuc_Thi_Chon_Anh.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_Chi_Ra.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_DangNhap.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_dang_ki.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_Gui_bao_cao_Bang_email.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_Hien_thi_noi_dung_email.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_Ho_tro_ket_noi_den_CSDL.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_Mo_man.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\form_Thu_Vao.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PhuTro\page_HinhNen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TrangChu\page_TrangChu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TrangChu\UserControl_KinhDoanh.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceXaml\MainResources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Admin\page_Admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Admin\UserControl_Che_do_bao_mat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Admin\UserControl_Thong_tin_nguoi_dung.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HeThong\page_HeThong.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HeThong\UserControl_HinhAnh.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\message_Box\messageBox_ThongBao_Dang_Nhap_Thanh_Cong.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\message_Box\messageBox_Thuan_Tuy_Thong_Bao.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\message_Box\messageBox_Thuc_thi_Tat_mat_khau_khi_xem_thong_tin_nguoi_dung.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\message_Box\messageBox_Thuc_thi_thay_doi_thong_tin_Admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\message_Box\message_Thuc_Thi_Chon_Anh.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_Chi_Ra.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_DangNhap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_dang_ki.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_Gui_bao_cao_Bang_email.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_Hien_thi_noi_dung_email.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_Ho_tro_ket_noi_den_CSDL.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_Mo_man.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\form_Thu_Vao.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PhuTro\page_HinhNen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TrangChu\page_TrangChu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TrangChu\UserControl_KinhDoanh.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Window1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

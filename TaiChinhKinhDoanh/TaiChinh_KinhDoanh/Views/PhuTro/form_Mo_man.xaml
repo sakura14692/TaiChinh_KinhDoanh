@@ -1,0 +1,64 @@
+﻿<Window x:Class="TaiChinh_KinhDoanh.Views.PhuTro.form_Mo_man"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaiChinh_KinhDoanh.Views.PhuTro"
+        mc:Ignorable="d"
+        Title="form_Mo_man" Height="600" Width="1000"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Black"
+        >
+   
+    <Grid>
+       
+            
+        
+        <TextBlock
+            x:Name="textblock_Mo_man"
+            Foreground="LightSkyBlue"
+            FontSize="20"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            TextWrapping="Wrap"
+            >
+
+        </TextBlock>
+        <Button
+            x:Name="button_tam_dung"
+            IsDefault="True"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="20"
+            Foreground="LightSkyBlue"
+            Height="30"
+            BorderBrush="LightSkyBlue"
+            BorderThickness="2"
+            Width="100" Click="button_tam_dung_Click"
+            >
+            Tạm dừng
+        </Button>
+
+        <Button
+            x:Name="button_tiep_tuc"
+            IsDefault="True"
+            
+            Visibility="Collapsed"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="20"
+             Foreground="LightSkyBlue"
+            Height="30"
+             BorderBrush="LightSkyBlue"
+            BorderThickness="2"
+            Width="100" Click="button_tiep_tuc_Click"
+            >
+            Tiếp tục
+        </Button>
+
+
+
+    </Grid>
+</Window>

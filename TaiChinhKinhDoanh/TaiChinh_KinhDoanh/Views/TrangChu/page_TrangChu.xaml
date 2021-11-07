@@ -1,0 +1,236 @@
+﻿<Page x:Class="TaiChinh_KinhDoanh.Views.TrangChu.page_TrangChu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaiChinh_KinhDoanh.Views.TrangChu" xmlns:Material="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="page_TrangChu">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.8,1" StartPoint="0,0">
+                <GradientStop Color="Black" />
+                <GradientStop Color="#FF242B3A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="250"
+                >
+
+            </ColumnDefinition>
+            <ColumnDefinition
+                Width="*"
+                >
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="30"
+                >
+
+            </RowDefinition>
+            <RowDefinition
+                Height="*"
+                >
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="1"
+            HorizontalAlignment="Stretch"
+           
+           
+            >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.8,1" StartPoint="0.8,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF1A1029" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       Foreground="White"
+                       TextWrapping="Wrap"
+                       FontSize="20" FontFamily="Arial"
+                       
+                       >
+                <Bold>Trang Chủ</Bold>
+
+            </TextBlock>
+
+            <StackPanel
+                Grid.Row="1"
+                >
+                <Button x:Name="button_KinhDoanh"
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White" 
+                    Click="button_KinhDoanh_Click" 
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                             x:Name="packicon_kinh_doanh"
+                            Kind="Business"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                           x:Name="textblock_kinh_doanh"
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Kinh Doanh
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Shopping"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Tài chính gia đình
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Wallet"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Tài chính cá nhân
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Paper"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Báo cáo
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+
+
+            </StackPanel>
+        </Grid>
+
+
+        <Grid
+            Grid.ColumnSpan="2" 
+            
+            >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.7,0" StartPoint="0.5,0.2">
+                    <GradientStop Color="MediumSlateBlue" Offset="1"/>
+                    <GradientStop Color="#FF332D56" Offset="0.2"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Background="{x:Null}"
+                >
+
+                
+
+
+
+
+            </StackPanel>
+
+
+
+        </Grid>
+
+        <Grid x:Name="grid_Add_UserControls"
+            Grid.Column="1"
+            Grid.Row="1"
+            
+            >
+            <Image
+                x:Name="image_TrangChu"
+                Stretch="Uniform"
+               Source="{Binding Source}" 
+                ></Image>
+
+        </Grid>
+    </Grid>
+</Page>

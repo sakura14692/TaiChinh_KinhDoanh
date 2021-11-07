@@ -1,0 +1,4467 @@
+﻿<UserControl x:Class="TaiChinh_KinhDoanh.Views.TrangChu.UserControl_KinhDoanh"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaiChinh_KinhDoanh.Views.TrangChu" xmlns:Material="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="750" Width="1200" Loaded="UserControl_Loaded">
+
+    <UserControl.Background>
+        <LinearGradientBrush EndPoint="0.6,0.9" StartPoint="0.8,0.1">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF211548" Offset="0.6"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+    <Grid>
+        <TabControl
+            BorderThickness="6" 
+            Background="Transparent" 
+            HorizontalAlignment="Left" 
+            BorderBrush="DarkSlateGray"
+            Width="1200" 
+            >
+
+            <TabItem 
+                Name="tabItem_Thong_tin_du_an_da_trien_khai"
+               
+                Header="Thông tin dự án đã triển khai"
+                    Foreground="LightSkyBlue" 
+              
+                     >
+
+                <Grid
+                    >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="381*"/>
+                        <ColumnDefinition Width="803*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid
+                    VerticalAlignment="Top"
+                        
+                    Height="220"
+                  Margin="20,20,20,0" Grid.ColumnSpan="2"
+                    
+                   
+                    >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+
+
+                        </Grid.RowDefinitions>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                          
+                            Width="300"
+                         Grid.Row="0"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                                    Height="25" 
+                                     Foreground="LightSkyBlue"
+                               FontSize="16"
+                                
+                                   
+                                    >
+                                    Mã dự án
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_du_an_da_trien_khai_Ma_du_an"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="198"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.ma_du_an,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode =OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="500"
+                        Grid.Row="1"
+                        Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                    FontSize="16"
+                                    >
+                                    Tên dự án
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_du_an_da_trien_khai_Ten_du_an"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="398"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap"
+                               Text="{Binding SelectedItem.ten_du_an,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode =OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="350"
+                        Grid.Row="2"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                    Ngày khởi công
+                                </TextBlock>
+                                
+                                    
+                                  
+                                    
+                               
+
+                                <TextBox
+                                    x:Name="textbox_du_an_da_trien_khai_Ngay_khoi_cong"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="203"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.ngay_khoi_cong,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+
+
+
+
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="320"
+                        Grid.Column="1"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                    FontSize="16"   
+                                    >
+                                   Tên sản phẩm
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_du_an_da_trien_khai_Ten_san_pham"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="187"
+                                   Height="25"
+                                  FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                     TextWrapping="Wrap"
+                               Text="{Binding SelectedItem.ten_san_pham,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="290"
+                         Margin="0,10,0,0"
+                        Grid.Row="4"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                    Số sản phẩm
+                                </TextBlock>
+                                <TextBox
+                                 x:Name="textbox_du_an_da_trien_khai_So_san_pham"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="164"
+                                   Height="25"
+                                    FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.so_san_pham,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="320"
+                         Margin="0,10,0,0"
+                        Grid.Row="3"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                    Ngày hoàn tất
+                                </TextBlock>
+                                <TextBox
+                                 x:Name="textbox_du_an_da_trien_khai_ngay_Hoan_tat"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="185"
+                                   Height="25"
+                                    FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.ngay_hoan_tat,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="262"
+                         Margin="0,10,0,0"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                     FontSize="16"  
+                                    >
+                               Số vốn(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_du_an_da_trien_khai_So_von"
+                                  
+                                    IsReadOnly="True"
+                                    Width="146"
+                                   Height="25"
+                                 FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.so_von, ElementName=listview_Thong_tin_du_an_da_trien_khai, Mode=OneWay}" MouseEnter="textbox_du_an_da_trien_khai_So_von_MouseEnter" 
+                                    />
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="293"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                    Lợi nhuận(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                   x:Name="textbox_du_an_da_trien_khai_Loi_nhuan"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="145"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                      Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.loi_nhuan,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode=OneWay}"  MouseEnter="textbox_du_an_da_trien_khai_Loi_nhuan_MouseEnter"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="300"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                                    Foreground="LightSkyBlue"
+                                    Height="25"
+                                       FontSize="16"
+                                    >
+                                 Doanh thu(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_du_an_da_trien_khai_Doanh_thu"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="150"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.doanh_thu,ElementName=listview_Thong_tin_du_an_da_trien_khai,Mode=OneWay}"  MouseEnter="textbox_du_an_da_trien_khai_Doanh_thu_MouseEnter" TextChanged="textbox_du_an_da_trien_khai_Doanh_thu_TextChanged"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+                    </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <Grid
+                        
+                        VerticalAlignment="Bottom"
+                        Height="400"
+                       Margin="0,0,0,20" Grid.ColumnSpan="2"
+                        >
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF060F31" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <StackPanel
+                            VerticalAlignment="Top"
+                            Orientation="Horizontal"
+                            Height="60"
+                            Width="1100"
+                          
+                            >
+                            <StackPanel.Background>
+                                <LinearGradientBrush EndPoint="0.3,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF120838" Offset="1"/>
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
+
+                            <Button x:Name="button_du_an_da_trien_khai_Them" 
+                                     Margin="5"
+                                    Height="40"
+                                    Width="80"
+                                   
+                                    BorderThickness="5" 
+                                    BorderBrush="LightSkyBlue" Click="button_du_an_da_trien_khai_Them_Click" 
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Add"
+                            Foreground="LightGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Thêm
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button x:Name="button_du_an_da_trien_khai_Sua" 
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_du_an_da_trien_khai_Sua_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Edit"
+                            Foreground="DarkGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                           Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Sửa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                x:Name="button_thong_tin_du_an_da_trien_khai_Xoa"
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_thong_tin_du_an_da_trien_khai_Xoa_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Delete"
+                            Foreground="Maroon"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Xóa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+
+                            <Button 
+                                x:Name="button_du_an_da_trien_khai_Luu"
+                    Margin="60,0,0,0"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" 
+                    Click="button_du_an_da_trien_khai_Luu_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="ContentSaveEdit"
+                            Foreground="DarkTurquoise"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                          Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Lưu
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                 x:Name="button_du_an_da_trien_khai_Huy"
+                                 Margin="5"
+                                 Height="40"
+                                 Width="80"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="button_du_an_da_trien_khai_Huy_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Cancel"
+                            Foreground="Bisque"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                           Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Hủy
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+                            <Button x:Name="gui_Bao_cao_du_an_da_trien_khai"
+                                Margin="60,0,0,0"
+                                Width="160"
+                                Height="40"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="gui_Bao_cao_du_an_da_trien_khai_Click"
+                                
+                                >
+                                <Grid
+                                   
+                                    >
+
+                                    <Material:PackIcon
+                                        VerticalAlignment="Center"
+                                    Kind="Paper"
+                                    Foreground="Gold"
+                                    
+                                    >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                                        VerticalAlignment="Center"
+                                        Margin="30,0,0,0"
+                                        Foreground="LightSkyBlue"
+                                        >
+                                    Gửi báo cáo
+                                    </TextBlock>
+
+
+                                </Grid>
+
+
+
+                            </Button>
+
+
+
+
+
+
+                            <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="300"
+                            Margin="80,0,0,0"
+                           VerticalAlignment="Center"
+                           
+                            >
+                                <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                    Width="280"
+                                
+                                >
+
+                                    <Material:PackIcon
+                                        Kind="Search"
+                                        VerticalAlignment="Center" 
+                                        Foreground="SlateBlue"
+                                        />
+
+
+                                    <TextBlock
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                    Foreground="LightSkyBlue"
+                                       
+                                Height="30"
+                                    >
+                                 Tìm kiếm
+                                    </TextBlock>
+                                    <TextBox
+                                         x:Name="textbox_du_an_da_trien_khai_Tim_kiem"
+                                    Margin="20,0,0,0"
+                                   VerticalAlignment="Center"
+                                    Width="140"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" TextChanged="textbox_du_an_da_trien_khai_Tim_kiem_TextChanged" 
+                               
+                                    />
+                                </StackPanel>
+                            </Border>
+
+
+
+
+                        </StackPanel>
+
+
+                        <ListView 
+                   x:Name="listview_Thong_tin_du_an_da_trien_khai" 
+                   FontSize="20" 
+                  BorderBrush="LightSkyBlue" 
+                  Foreground="DarkGoldenrod" 
+                 
+                  VerticalAlignment="Bottom"
+                      Margin="15"
+                      Height="300"
+                      HorizontalAlignment="Center"
+                      Width="1100" MouseEnter="listview_Thong_tin_du_an_da_trien_khai_MouseEnter" MouseLeave="listview_Thong_tin_du_an_da_trien_khai_MouseLeave" SelectionChanged="listview_Thong_tin_du_an_da_trien_khai_SelectionChanged" MouseDoubleClick="listview_Thong_tin_du_an_da_trien_khai_MouseDoubleClick" 
+                   
+                  
+                  
+                  
+            
+            >
+                            <ListView.View
+                
+                
+                
+                >
+                                <GridView
+                    
+                    
+                    >
+                                    <GridViewColumn
+                                    Header="Mã dự án"
+                                     DisplayMemberBinding="{Binding ma_du_an}"
+                        
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+                                    <GridViewColumn 
+                                      Header="Tên dự án"
+                                      DisplayMemberBinding="{Binding ten_du_an}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Ngày khởi công"
+                                         DisplayMemberBinding="{Binding ngay_khoi_cong}"
+                        
+                                                >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                      Header="Ngày hoàn tất"
+                                    DisplayMemberBinding="{Binding ngay_hoan_tat}"
+                        
+                                       >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                      Header="Số sản phẩm"
+                                    DisplayMemberBinding="{Binding so_san_pham}"
+                        
+                                       >
+
+                                    </GridViewColumn>
+
+
+
+                                   
+
+
+
+                                    <GridViewColumn 
+                                      Header="Tên sản phẩm"
+                                        DisplayMemberBinding="{Binding ten_san_pham}"
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Số vốn"
+                                   DisplayMemberBinding="{Binding so_von}"
+                        
+                                    >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Lợi nhuận"
+                                     DisplayMemberBinding="{Binding loi_nhuan}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                    Header="Doanh thu"
+                                     DisplayMemberBinding="{Binding doanh_thu}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+
+
+
+
+                                </GridView>
+                            </ListView.View>
+
+                        </ListView>
+
+
+                    </Grid>
+
+
+                </Grid>
+
+
+
+
+            </TabItem>
+
+            <TabItem 
+                Name="tabItem_xay_dung_ke_hoach_cho_du_an_moi"
+                Header="Xây dựng kế hoạch cho dự án mới"
+                     Foreground="LightSkyBlue" Height="37" VerticalAlignment="Top"
+                     >
+
+                <Grid
+                    >
+
+                    <Grid
+                    VerticalAlignment="Top"
+                        
+                    
+                  Margin="20"
+                    
+                   
+                    >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+
+
+
+                        </Grid.RowDefinitions>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                          
+                            Width="300"
+                         Grid.Row="0"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                                    Height="30" 
+                                    Foreground="LightSkyBlue"
+                               
+                                
+                                   
+                                    >
+                                    Mã dự án
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_xay_dung_ke_hoach_cho_du_an_moi_Ma_du_an"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="180"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    Text="{Binding SelectedItem.ma_du_an,ElementName=listview_xay_dung_ke_hoach_cho_du_an_moi,Mode=OneWay}"
+                               
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="500"
+                        Grid.Row="1"
+                        Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Tên dự án
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_xay_dung_ke_hoach_cho_du_an_moi_Ten_du_an"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="378"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                     TextWrapping="Wrap"
+                               Text="{Binding SelectedItem.ten_du_an,ElementName=listview_xay_dung_ke_hoach_cho_du_an_moi,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="500"
+                        Grid.Row="2"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Ngày khởi công dự kiến
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_xay_dung_ke_hoach_cho_du_an_moi_Ngay_khoi_cong_du_kien"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="252"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.ngay_khoi_cong_du_kien,ElementName=listview_xay_dung_ke_hoach_cho_du_an_moi,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+
+
+
+
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="400"
+                        Grid.Column="1"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                   Tên sản phẩm
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_xay_dung_ke_hoach_cho_du_an_moi_Ten_san_pham"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="243"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                     TextWrapping="Wrap"
+                                Text="{Binding SelectedItem.ten_san_pham,ElementName=listview_xay_dung_ke_hoach_cho_du_an_moi,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="359"
+                         Margin="0,10,0,0"
+                        Grid.Row="3"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Số sản phẩm dự tính
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_xay_dung_ke_hoach_cho_du_an_moi_So_san_pham_du_tinh"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="141"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.so_san_pham_du_tinh,ElementName=listview_xay_dung_ke_hoach_cho_du_an_moi,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="370"
+                         Margin="0,10,0,0"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                               Số vốn dự kiến(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_xay_dung_ke_hoach_cho_du_an_moi_So_von_du_kien"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="151"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                Text="{Binding SelectedItem.so_von_du_kien,ElementName=listview_xay_dung_ke_hoach_cho_du_an_moi,Mode=OneWay}"  MouseEnter="textbox_xay_dung_ke_hoach_cho_du_an_moi_So_von_du_kien_MouseEnter"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="420"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                             Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Lợi nhuận dự kiến(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_xay_dung_ke_hoach_cho_du_an_moi_Loi_nhuan_du_kien"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="175"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                Text="{Binding SelectedItem.loi_nhuan_du_kien,ElementName=listview_xay_dung_ke_hoach_cho_du_an_moi,Mode=OneWay}"  MouseEnter="textbox_xay_dung_ke_hoach_cho_du_an_moi_Loi_nhuan_du_kien_MouseEnter"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                    </Grid>
+
+                    <Grid
+                        
+                        VerticalAlignment="Bottom"
+                        Height="400"
+                        >
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF1D2B5C" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <StackPanel
+                            VerticalAlignment="Top"
+                            Orientation="Horizontal"
+                            Height="60"
+                            >
+                            <StackPanel.Background>
+                                <LinearGradientBrush EndPoint="0.3,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF120838" Offset="1"/>
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
+
+                            <Button 
+                                x:Name="button_ke_hoach_cho_du_an_moi_Them"
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5" BorderBrush="LightSkyBlue" Click="button_ke_hoach_cho_du_an_moi_Them_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Add"
+                            Foreground="LightGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                          Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Thêm
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                 x:Name="button_ke_hoach_cho_du_an_moi_Sua"
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_ke_hoach_cho_du_an_moi_Sua_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Edit"
+                            Foreground="DarkGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Sửa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                 x:Name="button_ke_hoach_cho_du_an_moi_Xoa"
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_ke_hoach_cho_du_an_moi_Xoa_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Delete"
+                            Foreground="Maroon"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                          Foreground="LightSkyBlue"
+                            >
+                            Xóa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+
+                            <Button 
+                                 x:Name="button_ke_hoach_cho_du_an_moi_Luu"
+                    Margin="60,0,0,0"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_ke_hoach_cho_du_an_moi_Luu_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="ContentSaveEdit"
+                            Foreground="DarkTurquoise"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Lưu
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+
+                            <Button 
+                                 x:Name="button_ke_hoach_cho_du_an_moi_Huy"
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_ke_hoach_cho_du_an_moi_Huy_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Cancel"
+                            Foreground="Bisque"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                           Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Hủy
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+
+                            <Button x:Name="gui_Bao_cao_ke_hoach_du_an_moi"
+                                Margin="60,0,0,0"
+                                Width="160"
+                                Height="40"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="gui_Bao_cao_ke_hoach_du_an_moi_Click"
+                                
+                                >
+                                <Grid
+                                   
+                                    >
+
+                                    <Material:PackIcon
+                                        VerticalAlignment="Center"
+                                    Kind="Paper"
+                                    Foreground="Gold"
+                                    
+                                    >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                                        VerticalAlignment="Center"
+                                        Margin="30,0,0,0"
+                                        Foreground="LightSkyBlue"
+                                        >
+                                    Gửi báo cáo
+                                    </TextBlock>
+
+
+                                </Grid>
+
+
+
+                            </Button>
+
+
+
+
+
+
+
+
+
+                            <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="300"
+                            Margin="120,0,0,0"
+                           VerticalAlignment="Center"
+                           
+                            >
+                                <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                    Width="280"
+                                
+                                >
+
+                                    <Material:PackIcon
+                                        Kind="Search"
+                                        VerticalAlignment="Center" 
+                                        Foreground="SlateBlue"
+                                        />
+
+
+                                    <TextBlock
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                    Foreground="LightSkyBlue"
+                                       
+                                Height="30"
+                                    >
+                                 Tìm kiếm
+                                    </TextBlock>
+                                    <TextBox
+                                         x:Name="textbox_Xay_dung_ke_hoach_du_an_moi_Tim_kiem"
+                                    Margin="20,0,0,0"
+                                   VerticalAlignment="Center"
+                                    Width="140"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" TextChanged="textbox_du_an_moi_Tim_kiem_TextChanged" 
+                               
+                                    />
+                                </StackPanel>
+                            </Border>
+
+
+
+
+
+
+
+
+
+
+                        </StackPanel>
+
+
+                        <ListView 
+                            x:Name="listview_xay_dung_ke_hoach_cho_du_an_moi"
+                 
+                   FontSize="20" 
+                  BorderBrush="LightSkyBlue" 
+                  Foreground="DarkGoldenrod" 
+                 
+                  VerticalAlignment="Bottom"
+                      Margin="15"
+                      Height="300"
+                      HorizontalAlignment="Center"
+                      Width="1100" MouseEnter="listview_xay_dung_ke_hoach_cho_du_an_moi_MouseEnter" MouseLeave="listview_xay_dung_ke_hoach_cho_du_an_moi_MouseLeave" MouseDoubleClick="listview_xay_dung_ke_hoach_cho_du_an_moi_MouseDoubleClick" 
+                      
+                   
+                  
+                  
+                  
+            
+            >
+                            <ListView.View
+                
+                
+                
+                >
+                                <GridView
+                    
+                    
+                    >
+                                    <GridViewColumn
+                                    Header="Mã dự án"
+                                     DisplayMemberBinding="{Binding ma_du_an}"
+                        
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+                                    <GridViewColumn 
+                                      Header="Tên dự án"
+                                      DisplayMemberBinding="{Binding ten_du_an}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Ngày khởi công dự kiến"
+                                         DisplayMemberBinding="{Binding ngay_khoi_cong_du_kien}"
+                        
+                                                >
+
+                                    </GridViewColumn>
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Số sản phẩm dự tính"
+                                    DisplayMemberBinding="{Binding so_san_pham_du_tinh}"
+                        
+                                       >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Tên sản phẩm"
+                                        DisplayMemberBinding="{Binding ten_san_pham}"
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Số vốn dự kiến"
+                                   DisplayMemberBinding="{Binding so_von_du_kien}"
+                        
+                                    >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Lợi nhuận dự kiến"
+                                     DisplayMemberBinding="{Binding loi_nhuan_du_kien}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+
+
+
+
+
+                                </GridView>
+                            </ListView.View>
+
+                        </ListView>
+
+
+                    </Grid>
+
+
+                </Grid>
+
+
+
+
+            </TabItem>
+
+            <TabItem 
+                Name="tabItem_quan_ly_thong_tin_doi_tac"
+                Header="Quản lý thông tin đối tác"
+                     Foreground="LightSkyBlue"
+                     >
+
+
+                <Grid
+                    >
+
+                    <Grid
+                    VerticalAlignment="Top"
+                        
+                    
+                  Margin="20"
+                    
+                   
+                    >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                          
+                            Width="300"
+                         Grid.Row="0"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                                    Height="30" 
+                                     Foreground="LightSkyBlue"
+                               
+                                
+                                   
+                                    >
+                                    Mã đối tác
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Ma_doi_tac"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="170"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.ma_doi_tac,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="312"
+                        Grid.Row="1"
+                        Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Tên đối tác
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Ten_doi_tac"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="180"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                Text="{Binding SelectedItem.ten_doi_tac,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="350"
+                        Grid.Row="2"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Nghề nghiệp
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Nghe_nghiep"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="199"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                Text="{Binding SelectedItem.nghe_nghiep,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="380"
+                        Grid.Column="0"
+                            Grid.Row="4"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                   Ngày sinh
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Ngay_sinh"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="256"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                Text="{Binding SelectedItem.ngay_sinh,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+
+
+
+
+
+
+
+                            </StackPanel>
+                        </Border>
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="294"
+                         Margin="0,10,0,0"
+                        Grid.Row="3"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Số điện thoại
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_So_dien_thoai"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="141"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                Text="{Binding SelectedItem.so_dien_thoai,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="550"
+                         Margin="0,10,0,0"
+                        Grid.Column="0"
+                        Grid.Row="5"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                               Địa chỉ
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Dia_chi"
+                                     IsReadOnly="True" 
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="455"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap"
+                                    
+                                Text="{Binding SelectedItem.dia_chi,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="500"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                    Ngày bắt đầu hợp tác
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Ngay_bat_dau_hop_tac"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="272"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                Text="{Binding SelectedItem.ngay_bat_dau_hop_tac,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+
+                               
+
+
+
+
+                            </StackPanel>
+                        </Border>
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="385"
+                         Margin="0,10,0,0"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                              Tỉ lệ góp vốn tính bằng %
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Ti_le_gop_von"
+                                     IsReadOnly="True" 
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="122"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap"
+                                    
+                                Text="{Binding SelectedItem.ti_le_gop_von,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="500"
+                         Margin="0,10,0,0"
+                        Grid.Column="1"
+                        Grid.Row="3"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                              Tỉ lệ cổ tức được phân phối tính bằng %
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Ti_le_phan_phoi_co_tuc"
+                                     IsReadOnly="True" 
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="111"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap"
+                                    
+                                Text="{Binding SelectedItem.ti_le_phan_phoi_co_tuc,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="553"
+                         Margin="0,10,0,0"
+                        Grid.Column="1"
+                        Grid.Row="4"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                          Tổng số tiền đã giao dịch(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Tong_so_tien_da_giao_dich"
+                                     IsReadOnly="True" 
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="240"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap"
+                                    
+                                Text="{Binding SelectedItem.tong_so_tien_da_giao_dich,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}" MouseEnter="textbox_quan_ly_thong_tin_doi_tac_Tong_so_tien_da_giao_dich_MouseEnter"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="455"
+                         Margin="0,10,0,0"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                         Đóng vai trò
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_thong_tin_doi_tac_Dong_vai_tro"
+                                     IsReadOnly="True" 
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="310"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap"
+                                    
+                                Text="{Binding SelectedItem.dong_vai_tro,ElementName=listview_quan_ly_thong_tin_doi_tac,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </Grid>
+
+                    <Grid
+                        
+                        VerticalAlignment="Bottom"
+                        Height="400"
+                        >
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF1D2B5C" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <StackPanel
+                            VerticalAlignment="Top"
+                            Orientation="Horizontal"
+                            Height="60"
+                            >
+                            <StackPanel.Background>
+                                <LinearGradientBrush EndPoint="0.3,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF120838" Offset="1"/>
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
+
+                            <Button 
+                                x:Name="button_quan_ly_thong_tin_doi_tac_Them"
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5" BorderBrush="LightSkyBlue" Click="button_quan_ly_thong_tin_doi_tac_Them_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Add"
+                            Foreground="LightGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                           Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Thêm
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                 x:Name="button_quan_ly_thong_tin_doi_tac_Sua"
+                                 Margin="5"
+                                 Height="40"
+                                 Width="80"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="button_quan_ly_thong_tin_doi_tac_Sua_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Edit"
+                            Foreground="DarkGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Sửa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                 x:Name="button_quan_ly_thong_tin_doi_tac_Xoa"
+                                 Margin="5"
+                                 Height="40"
+                                 Width="80"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="button_quan_ly_thong_tin_doi_tac_Xoa_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Delete"
+                            Foreground="Maroon"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Xóa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+
+                            <Button 
+                                 x:Name="button_quan_ly_thong_tin_doi_tac_Luu"
+                                Margin="60,0,0,0"
+                                Height="40"
+                                 Width="80"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="button_quan_ly_thong_tin_doi_tac_Luu_Click"
+                    
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="ContentSaveEdit"
+                            Foreground="DarkTurquoise"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                          Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Lưu
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+
+                            <Button 
+                                x:Name="button_thong_tin_doi_tac_Huy"
+                             Margin="5"
+                            Height="40"
+                              Width="80"
+                             BorderThickness="5"
+                             BorderBrush="LightSkyBlue" Click="button_thong_tin_doi_tac_Huy_Click"
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Cancel"
+                            Foreground="Bisque"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                           Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Hủy
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button x:Name="gui_Bao_cao_thong_tin_doi_tac"
+                                Margin="60,0,0,0"
+                                Width="160"
+                                Height="40"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="gui_Bao_cao_thong_tin_doi_tac_Click"
+                                
+                                >
+                                <Grid
+                                   
+                                    >
+
+                                    <Material:PackIcon
+                                        VerticalAlignment="Center"
+                                    Kind="Paper"
+                                    Foreground="Gold"
+                                    
+                                    >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                                        VerticalAlignment="Center"
+                                        Margin="30,0,0,0"
+                                        Foreground="LightSkyBlue"
+                                        >
+                                    Gửi báo cáo
+                                    </TextBlock>
+
+
+                                </Grid>
+
+
+
+                            </Button>
+
+
+
+
+
+
+
+
+                            <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="300"
+                            Margin="120,0,0,0"
+                           VerticalAlignment="Center"
+                           
+                            >
+                                <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                    Width="280"
+                                
+                                >
+
+                                    <Material:PackIcon
+                                        Kind="Search"
+                                        VerticalAlignment="Center" 
+                                        Foreground="SlateBlue"
+                                        />
+
+
+                                    <TextBlock
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                     Foreground="LightSkyBlue"
+                                        
+                                Height="30"
+                                    >
+                                 Tìm kiếm
+                                    </TextBlock>
+                                    <TextBox
+                                        x:Name="textbox_quan_ly_thong_tin_doi_tac_Tim_kiem"
+                                    Margin="20,0,0,0"
+                                   VerticalAlignment="Center"
+                                    Width="140"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" TextChanged="textbox_quan_ly_thong_tin_doi_tac_Tim_kiem_TextChanged" 
+                               
+                                    >
+
+                                    </TextBox>
+                                </StackPanel>
+                            </Border>
+
+
+
+
+                        </StackPanel>
+
+
+                        <ListView 
+                            x:Name="listview_quan_ly_thong_tin_doi_tac"
+                  
+                            FontSize="20" 
+                            BorderBrush="LightSkyBlue" 
+                            Foreground="DarkGoldenrod"  
+              
+                            VerticalAlignment="Bottom"
+                            Margin="15"
+                            Height="300"
+                            HorizontalAlignment="Center"
+                            Width="1100" MouseEnter="listview_quan_ly_thong_tin_doi_tac_MouseEnter" MouseLeave="listview_quan_ly_thong_tin_doi_tac_MouseLeave" MouseDoubleClick="listview_quan_ly_thong_tin_doi_tac_MouseDoubleClick" 
+                      
+                   
+                  
+                  
+                  
+            
+            >
+                            <ListView.View
+                
+                
+                
+                >
+                                <GridView
+                    
+                    
+                    >
+                                    <GridViewColumn
+                                    Header="Mã đối tác"
+                                     DisplayMemberBinding="{Binding ma_doi_tac}"
+                        
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+                                    <GridViewColumn 
+                                      Header="Tên đối tác"
+                                      DisplayMemberBinding="{Binding ten_doi_tac}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Nghề nghiệp"
+                                         DisplayMemberBinding="{Binding nghe_nghiep}"
+                        
+                                                >
+
+                                    </GridViewColumn>
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Số điện thoại"
+                                    DisplayMemberBinding="{Binding so_dien_thoai}"
+                        
+                                       >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Ngày sinh"
+                                        DisplayMemberBinding="{Binding ngay_sinh}"
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Địa chỉ"
+                                   DisplayMemberBinding="{Binding dia_chi}"
+                        
+                                    >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Ngày bắt đầu hợp tác"
+                                     DisplayMemberBinding="{Binding ngay_bat_dau_hop_tac}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+                                    <GridViewColumn 
+                                    Header="Đóng vai trò"
+                                     DisplayMemberBinding="{Binding dong_vai_tro}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                    Header="Tỉ lệ góp vốn"
+                                     DisplayMemberBinding="{Binding ti_le_gop_von}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Tỉ lệ phân phối cổ tức"
+                                     DisplayMemberBinding="{Binding ti_le_phan_phoi_co_tuc}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+                                    <GridViewColumn 
+                                    Header="Tổng số vốn của dự án"
+                                     DisplayMemberBinding="{Binding tong_so_tien_da_giao_dich}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+                                </GridView>
+                            </ListView.View>
+
+                        </ListView>
+
+
+                    </Grid>
+
+
+                </Grid>
+
+
+
+
+
+
+            </TabItem>
+
+
+
+
+
+
+
+
+            <TabItem Header="Quản lý quỹ đầu tư"
+                     Foreground="LightSkyBlue" Height="37" VerticalAlignment="Top"
+                     >
+
+
+                <Grid
+                    >
+
+                    <Grid
+                    VerticalAlignment="Top"
+                        
+                    Height="250"
+                  Margin="20"
+                    
+                   
+                    >
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition ></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+
+                            <RowDefinition ></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+
+                        <Border x:Name="border_Thu_vao"
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="390"
+                        Grid.Column="1"
+                         Margin="0,10,0,0" 
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                                   Thu vào(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_quan_ly_quy_dau_tu_Thu_Vao"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="232"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_quan_ly_quy_dau_tu_Thu_Vao_MouseEnter"
+                                
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="390"
+                         Margin="0,10,0,0"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock x:Name="textblock_Chi_Ra"
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                               Foreground="LightSkyBlue"
+                                Height="30" MouseDown="textblock_Chi_Ra_MouseDown"
+                                    >
+                               Chi ra(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_quy_dau_tu_Chi_Ra"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="251"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap" MouseEnter="textbox_quan_ly_quy_dau_tu_Chi_Ra_MouseEnter"
+                                    
+                                
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="400"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30"
+                                    >
+                                Số dư hiện tại(VNĐ)
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_quan_ly_quy_dau_tu_So_du_hien_tai"
+                                     IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="190"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_quan_ly_quy_dau_tu_So_du_hien_tai_MouseEnter"
+                                
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </Grid>
+
+                    <Grid
+                        
+                        VerticalAlignment="Bottom"
+                        Height="400"
+                        >
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF1D2B5C" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+
+
+                    </Grid>
+
+
+                </Grid>
+
+
+
+
+
+
+            </TabItem>
+
+
+
+
+
+
+           
+           
+
+
+
+
+
+
+
+            <TabItem Header="Thống Kê - Tính Toán"
+                     Foreground="LightSkyBlue" Height="37" VerticalAlignment="Top"
+                     >
+
+
+                <Grid
+                    >
+
+                    <Grid
+                    VerticalAlignment="Top"
+                        
+                    Height="250"
+                  Margin="20"
+                    
+                   
+                    >
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition ></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                          
+
+
+                        </Grid.RowDefinitions>
+
+
+
+
+                        <GroupBox
+                            x:Name="groupbox_thong_tin_du_an_da_trien_khai"
+                           BorderBrush="LightGreen"
+                            HorizontalAlignment="Center"
+                            Width="500"
+                            
+                            Header="Thông tin dự án đã triển khai"
+                            >
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition ></ColumnDefinition>
+                                   
+
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                   
+                                </Grid.RowDefinitions>
+
+
+
+                                <Border 
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                          HorizontalAlignment="Center"
+                            Width="450"
+                       Grid.Row="1"
+                         Margin="0,10,0,0" 
+                            >
+                                    <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                        <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                          Tổng lợi nhuận thu được(VNĐ)
+                                        </TextBlock>
+                                        <TextBox
+                                   x:Name="textbox_thong_tin_du_an_da_trien_khai_Tong_loi_nhuan"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="145"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_thong_tin_du_an_da_trien_khai_Tong_loi_nhuan_MouseEnter"
+                                
+                                    >
+
+                                        </TextBox>
+                                    </StackPanel>
+                                </Border>
+
+
+                                <Border 
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                          HorizontalAlignment="Center"
+                            Width="450"
+                       Grid.Row="2"
+                         Margin="0,10,0,0" 
+                            >
+                                    <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                        <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                             Tổng doanh thu(VNĐ)
+                                        </TextBlock>
+                                        <TextBox
+                                   x:Name="textbox_thong_ke_du_an_da_trien_khai_Tong_doanh_thu"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="220"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_thong_ke_du_an_da_trien_khai_Tong_doanh_thu_MouseEnter"
+                                
+                                    >
+
+                                        </TextBox>
+                                    </StackPanel>
+                                </Border>
+
+
+
+                                <Border 
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                          HorizontalAlignment="Center"
+                            Width="450"
+                       Grid.Row="3"
+                         Margin="0,10,0,0" 
+                            >
+                                    <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                        <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                             Tổng số dự án đã triển khai
+                                        </TextBlock>
+                                        <TextBox
+                                   x:Name="textbox_thong_ke_du_an_da_trien_khai_Tong_so_du_an_da_trien_khai"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="172"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_thong_ke_du_an_da_trien_khai_Tong_doanh_thu_MouseEnter"
+                                
+                                    >
+
+                                        </TextBox>
+                                    </StackPanel>
+                                </Border>
+
+
+
+                           
+                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <Border 
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                         HorizontalAlignment="Center"
+                            Width="450"
+                        Grid.Column="1"
+                         Margin="0,10,0,0" 
+                            >
+                                    <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                        <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                                  Tổng số vốn đã đầu tư(VNĐ)
+                                        </TextBlock>
+                                        <TextBox
+                                   x:Name="textbox_thong_tin_du_an_da_trien_khai_Tong_So_von"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="165"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_thong_tin_du_an_da_trien_khai_Tong_So_von_MouseEnter"
+                                
+                                    >
+
+                                        </TextBox>
+                                    </StackPanel>
+                                </Border>
+
+
+
+
+
+
+
+                            </Grid>
+                            
+                            
+                        </GroupBox>
+
+
+                        <GroupBox
+                            x:Name="groupbox_Ke_hoach_du_an_moi"
+                            Grid.Column="1"
+                            BorderBrush="LightGreen"
+                            
+                             HorizontalAlignment="Center"
+                            Width="500"
+                            Header="Xây kế hoạch cho dự án mới"
+                            >
+
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition ></ColumnDefinition>
+
+
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+
+
+
+                                <Border 
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Center"
+                            Width="450"
+                        Grid.Column="1"
+                         Margin="0,10,0,0" 
+                            >
+                                    <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                        <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                                  Tổng số vốn dự kiến(VNĐ)
+                                        </TextBlock>
+                                        <TextBox
+                                   x:Name="textbox_Ke_hoach_du_an_moi_Tong_So_von_du_kien"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="180"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_Ke_hoach_du_an_moi_Tong_So_von_du_kien_MouseEnter"
+                                
+                                    >
+
+                                        </TextBox>
+                                    </StackPanel>
+                                </Border>
+
+
+
+                                <Border 
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                         HorizontalAlignment="Center"
+                            Width="450"
+                      Grid.Row="1"
+                         Margin="0,10,0,0" 
+                            >
+                                    <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                        <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                                   Tổng lợi nhuận dự kiến(VNĐ)
+                                        </TextBlock>
+                                        <TextBox
+                                   x:Name="textbox_Ke_hoach_du_an_moi_Tong_loi_nhuan_du_kien"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="157"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_Ke_hoach_du_an_moi_Tong_loi_nhuan_du_kien_MouseEnter"
+                                
+                                    >
+
+                                        </TextBox>
+                                    </StackPanel>
+                                </Border>
+
+
+
+
+
+                                <Border 
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                         HorizontalAlignment="Center"
+                            Width="450"
+                      Grid.Row="2"
+                         Margin="0,10,0,0" 
+                            >
+                                    <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                        <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="30" MouseDown="TextBlock_MouseDown"
+                                    >
+                                   Tổng số dự án đang chờ được triển khai
+                                        </TextBlock>
+                                        <TextBox
+                                   x:Name="textbox_Ke_hoach_du_an_moi_Tong_so_du_an_dang_cho_trien_khai"
+                                   IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="62"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" MouseEnter="textbox_Ke_hoach_du_an_moi_Tong_loi_nhuan_du_kien_MouseEnter"
+                                
+                                    >
+
+                                        </TextBox>
+                                    </StackPanel>
+                                </Border>
+
+
+
+
+
+
+
+
+
+
+                            </Grid>
+
+
+
+                        </GroupBox>
+
+
+                    </Grid>
+
+                    <Grid
+                        
+                        VerticalAlignment="Bottom"
+                        Height="300"
+                        >
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF1D2B5C" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+
+
+                    </Grid>
+
+
+                </Grid>
+
+
+
+
+
+
+            </TabItem>
+
+
+
+
+
+
+
+
+            <TabItem
+                Name="tabitem_giam_sat_du_an"
+                Header="Giám sát dự án"
+                     Foreground="LightSkyBlue" Height="37" VerticalAlignment="Top"
+                     >
+
+
+
+
+                <Grid
+                    >
+
+
+                    <Grid
+                    VerticalAlignment="Top"
+                        
+                    Height="280"
+                  Margin="20,25,20,0" 
+                    
+                   
+                    >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                          
+                            Width="300"
+                         Grid.Row="0"
+                         Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                                    Height="25" 
+                                     Foreground="LightSkyBlue"
+                               FontSize="16"
+                                
+                                   
+                                    >
+                                    Mã dự án
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_Giam_sat_Ma_du_an"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="197"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.ma_du_an,ElementName=listview_Giam_sat_du_an,Mode =OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="500"
+                        Grid.Row="1"
+                        Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                    FontSize="16"
+                                    >
+                                    Tên dự án
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_Giam_sat_Ten_du_an"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="397"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                    TextWrapping="Wrap"
+                               Text="{Binding SelectedItem.ten_du_an,ElementName=listview_Giam_sat_du_an,Mode =OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="320"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                    FontSize="16"   
+                                    >
+                                   Tên sản phẩm
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_Giam_sat_Ten_san_pham"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="187"
+                                   Height="25"
+                                  FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                     TextWrapping="Wrap"
+                               Text="{Binding SelectedItem.ten_san_pham,ElementName=listview_Giam_sat_du_an,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="320"
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Margin="0,10,0,0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                    FontSize="16"   
+                                    >
+                                  Đơn vị tính
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_Giam_sat_Don_vi_tinh"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="205"
+                                   Height="25"
+                                  FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                                     TextWrapping="Wrap"
+                               Text="{Binding SelectedItem.don_vi_tinh,ElementName=listview_Giam_sat_du_an,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="368"
+                         Margin="0,10,0,0"
+                    Grid.Column="1"
+                        Grid.Row="4"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                    Ngày cập nhật báo cáo
+                                </TextBlock>
+                                <TextBox
+                                 x:Name="textbox_Giam_sat_ngay_cap_nhat_bao_cao"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="168"
+                                   Height="25"
+                                    FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.ngay_cap_nhat_bao_cao,ElementName=listview_Giam_sat_du_an,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="400"
+                         Margin="0,10,0,0"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                     FontSize="16"  
+                                    >
+                               Số lượng sản phẩm trước đó
+                                </TextBlock>
+                                <TextBox
+                                    x:Name="textbox_Giam_sat_So_luong_san_pham_ban_dau"
+                                  
+                                    IsReadOnly="True"
+                                    Width="175"
+                                   Height="25"
+                                 FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.so_luong_san_pham_ban_dau, ElementName=listview_Giam_sat_du_an, Mode=OneWay}" 
+                                    />
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="400"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                   Số lượng sản phẩm hao hụt
+                                </TextBlock>
+                                <TextBox
+                                   x:Name="textbox_Giam_sat_so_luong_san_pham_hao_hut"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="170"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                      Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.so_luong_san_pham_hao_hut,ElementName=listview_Giam_sat_du_an,Mode=OneWay}"  
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="508"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                   Số lượng sản phẩm hao hụt quy đổi ra tiền
+                                </TextBlock>
+                                <TextBox
+                                   x:Name="textbox_Giam_sat_so_luong_san_pham_hao_hut_quy_doi_ra_tien"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="170"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                      Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.so_luong_san_pham_hao_hut_quy_doi_ra_tien,ElementName=listview_Giam_sat_du_an,Mode=OneWay}" MouseEnter="textbox_Giam_sat_so_luong_san_pham_hao_hut_quy_doi_ra_tien_MouseEnter"  
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="550"
+                         Margin="0,10,0,0"
+                    Grid.Column="1"
+                        Grid.Row="2"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                  Nguyên nhân hao hụt
+                                </TextBlock>
+                                <TextBox
+                                 x:Name="textbox_Giam_sat_Nguyen_nhan_hao_hut"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="360"
+                                   Height="25"
+                                    FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.nguyen_nhan_hao_hut,ElementName=listview_Giam_sat_du_an,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="372"
+                            Margin="0,10,0,0"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                                    Foreground="LightSkyBlue"
+                                    Height="25"
+                                       FontSize="16"
+                                    >
+                               Số lượng sản phẩm còn lại
+                                </TextBlock>
+                                <TextBox
+                                     x:Name="textbox_Giam_sat_so_luong_san_pham_con_lai"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="150"
+                                   Height="25"
+                                   FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.so_luong_san_pham_con_lai,ElementName=listview_Giam_sat_du_an,Mode=OneWay}" TextChanged="textbox_Giam_sat_so_luong_san_pham_con_lai_TextChanged"  
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+                        <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="200"
+                         Margin="0,10,0,0"
+                    Grid.Column="1"
+                        Grid.Row="5"
+                            >
+                            <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                
+                                >
+                                <TextBlock
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                              Foreground="LightSkyBlue"
+                                Height="25"
+                                       FontSize="16"
+                                    >
+                                    ID
+                                </TextBlock>
+                                <TextBox
+                                 x:Name="textbox_Giam_sat_ID"
+                                    IsReadOnly="True"
+                                    Margin="0,0,10,0"
+                                   VerticalAlignment="Center"
+                                    Width="150"
+                                   Height="25"
+                                    FontSize="16"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                     Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod"
+                               Text="{Binding SelectedItem.id,ElementName=listview_Giam_sat_du_an,Mode=OneWay}"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </Border>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <Grid
+                        
+                        VerticalAlignment="Bottom"
+                        Height="350"
+                       Margin="0,0,0,20" Grid.ColumnSpan="2"
+                        >
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF060F31" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <StackPanel
+                            VerticalAlignment="Top"
+                            Orientation="Horizontal"
+                            Height="60"
+                            Width="1100"
+                          
+                            >
+                            <StackPanel.Background>
+                                <LinearGradientBrush EndPoint="0.3,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FF120838" Offset="1"/>
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
+
+                            <Button x:Name="button_Giam_sat_du_an_Them" 
+                                     Margin="5"
+                                    Height="40"
+                                    Width="80"
+                                   
+                                    BorderThickness="5" 
+                                    BorderBrush="LightSkyBlue" Click="button_Giam_sat_du_an_Them_Click" 
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Add"
+                            Foreground="LightGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Thêm
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button x:Name="button_Giam_sat_du_an_Sua" 
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                     BorderBrush="LightSkyBlue"
+                    BorderThickness="5" Click="button_Giam_sat_du_an_Sua_Click" 
+                            >
+
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Edit"
+                            Foreground="DarkGreen"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                           Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Sửa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                x:Name="button_Giam_sat_du_an_Xoa"
+                    Margin="5"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_Giam_sat_du_an_Xoa_Click" 
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Delete"
+                            Foreground="Maroon"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Xóa
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+
+                            <Button 
+                                x:Name="button_Giam_sat_du_an_Luu"
+                    Margin="60,0,0,0"
+                    Height="40"
+                    Width="80"
+                    BorderThickness="5"
+                    BorderBrush="LightSkyBlue" Click="button_Giam_sat_du_an_Luu_Click" 
+                  
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="ContentSaveEdit"
+                            Foreground="DarkTurquoise"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                          Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Lưu
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+                            <Button 
+                                 x:Name="button_Giam_sat_du_an_Huy"
+                                 Margin="5"
+                                 Height="40"
+                                 Width="80"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="button_Giam_sat_du_an_Huy_Click" 
+                    >
+                                <Grid
+                        Width="60"
+                        >
+                                    <Material:PackIcon 
+                            Kind="Cancel"
+                            Foreground="Bisque"
+                                           >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                            HorizontalAlignment="Right"
+                           Foreground="LightSkyBlue"
+                            FontSize="16"
+                            >
+                            Hủy
+                                    </TextBlock>
+                                </Grid>
+
+                            </Button>
+
+
+
+
+                            <Button x:Name="gui_Bao_cao_Giam_sat_du_an"
+                                Margin="60,0,0,0"
+                                Width="160"
+                                Height="40"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                 BorderThickness="5"
+                                 BorderBrush="LightSkyBlue" Click="gui_Bao_cao_Giam_sat_du_an_Click" 
+                                
+                                >
+                                <Grid
+                                   
+                                    >
+
+                                    <Material:PackIcon
+                                        VerticalAlignment="Center"
+                                    Kind="Paper"
+                                    Foreground="Gold"
+                                    
+                                    >
+
+                                    </Material:PackIcon>
+                                    <TextBlock
+                                        VerticalAlignment="Center"
+                                        Margin="30,0,0,0"
+                                        Foreground="LightSkyBlue"
+                                        >
+                                    Gửi báo cáo
+                                    </TextBlock>
+
+
+                                </Grid>
+
+
+
+                            </Button>
+
+
+
+
+
+
+                            <Border
+                            CornerRadius="5"
+                            BorderThickness="2"
+                            BorderBrush="LightSkyBlue" 
+                            HorizontalAlignment="Left"
+                            Width="300"
+                            Margin="60,0,0,0"
+                           VerticalAlignment="Center"
+                        Height="40"
+                           
+                            >
+                                <StackPanel
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                    Width="280"
+                                
+                                >
+
+                                    <Material:PackIcon
+                                        Kind="Search"
+                                        VerticalAlignment="Center" 
+                                        Foreground="SlateBlue"
+                                        />
+
+                                    <TextBlock
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                     Foreground="LightSkyBlue"
+                                        
+                                Height="30"
+                                    >
+                                 Tìm kiếm
+                                    </TextBlock>
+
+                                    <TextBox
+                                         x:Name="textbox_Giam_sat_du_an_Tim_kiem"
+                                    Margin="30,0,0,0"
+                                   VerticalAlignment="Center"
+                                    Width="135"
+                                   Height="25"
+                                    FontSize="15"
+                                   BorderBrush="Transparent"
+                                Background="Transparent"
+                                    Foreground="DarkGoldenrod" 
+                                    CaretBrush="DarkGoldenrod" TextChanged="textbox_Giam_sat_du_an_Tim_kiem_TextChanged"  
+                               
+                                    />
+                                </StackPanel>
+                            </Border>
+
+
+
+
+                        </StackPanel>
+
+
+                        <ListView 
+                   x:Name="listview_Giam_sat_du_an" 
+                   FontSize="20" 
+                  BorderBrush="LightSkyBlue" 
+                  Foreground="DarkGoldenrod" 
+                 
+                  VerticalAlignment="Bottom"
+                      Margin="15"
+                      Height="250"
+                      HorizontalAlignment="Center"
+                      Width="1100" MouseDoubleClick="listview_Giam_sat_du_an_MouseDoubleClick" MouseEnter="listview_Giam_sat_du_an_MouseEnter" MouseLeave="listview_Giam_sat_du_an_MouseLeave" SelectionChanged="listview_Giam_sat_du_an_SelectionChanged" 
+                   
+                  
+                  
+                  
+            
+            >
+                            <ListView.View
+                
+                
+                
+                >
+                                <GridView
+                    
+                    
+                    >
+                                    <GridViewColumn
+                                    Header="Mã dự án"
+                                     DisplayMemberBinding="{Binding ma_du_an}"
+                        
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+                                    <GridViewColumn 
+                                      Header="Tên dự án"
+                                      DisplayMemberBinding="{Binding ten_du_an}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Tên sản phẩm"
+                                         DisplayMemberBinding="{Binding ten_san_pham}"
+                        
+                                                >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                      Header="Đơn vị tính"
+                                    DisplayMemberBinding="{Binding don_vi_tinh}"
+                        
+                                       >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Số lượng sản phẩm ban đầu"
+                                        DisplayMemberBinding="{Binding so_luong_san_pham_ban_dau}"
+                        
+                                        >
+
+                                    </GridViewColumn>
+
+
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Số lượng sản phẩm hao hụt"
+                                   DisplayMemberBinding="{Binding so_luong_san_pham_hao_hut}"
+                        
+                                    >
+
+                                    </GridViewColumn>
+
+
+
+
+
+                                    <GridViewColumn 
+                                    Header="Số lượng sản phẩm hao hụt quy đổi ra tiền"
+                                     DisplayMemberBinding="{Binding so_luong_san_pham_hao_hut_quy_doi_ra_tien}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                    Header="Nguyên nhân hao hụt"
+                                     DisplayMemberBinding="{Binding nguyen_nhan_hao_hut}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                    Header="Số lượng sản phẩm còn lại"
+                                     DisplayMemberBinding="{Binding so_luong_san_pham_con_lai}"
+                        
+                                      >
+
+                                    </GridViewColumn>
+
+
+
+
+                                    <GridViewColumn 
+                                      Header="Ngày cập nhật báo cáo"
+                                    DisplayMemberBinding="{Binding ngay_cap_nhat_bao_cao}"
+                        
+                                       >
+
+                                    </GridViewColumn>
+
+
+
+                                    <GridViewColumn 
+                                      Header="ID"
+                                    DisplayMemberBinding="{Binding id}"
+                        
+                                       >
+
+                                    </GridViewColumn>
+
+
+
+
+                                </GridView>
+                            </ListView.View>
+
+                        </ListView>
+
+
+                    </Grid>
+
+
+                </Grid>
+
+
+
+
+
+
+
+            </TabItem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </TabControl>
+
+
+
+
+
+
+    </Grid>
+
+</UserControl>

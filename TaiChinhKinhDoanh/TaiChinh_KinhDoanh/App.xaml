@@ -1,0 +1,13 @@
+﻿<Application x:Class="TaiChinh_KinhDoanh.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TaiChinh_KinhDoanh"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary
+           Source="ResourceXaml/MainResources.xaml"
+            >
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>trungpro.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="trungpro.png" />
+    <None Remove="Views\Admin\235304562_426682578720209_4611773534503137783_n.jpg" />
+    <None Remove="Views\HeThong\anh-gai-xinh-hap-dan-nhieu-nam-gioi.jpg" />
+    <None Remove="Views\PhuTro\anh-gai-xinh-2k-de-thuong-cute.jpg" />
+    <None Remove="Views\PhuTro\anh-gai-xinh-mac-kimono-hong-duyen-dang-04-08-2019-1.jpg" />
+    <None Remove="Views\PhuTro\HinhNen.jpg" />
+    <None Remove="Views\PhuTro\planet-space-and-stars.jpg" />
+    <None Remove="Views\PhuTro\trungpro.png" />
+    <None Remove="Views\TrangChu\anh-gai-xinh-2k-de-thuong-cute.jpg" />
+    <None Remove="Views\TrangChu\anh-gai-xinh-mac-kimono-hong-duyen-dang-04-08-2019-1.jpg" />
+    <None Remove="Views\trungpro.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AE.Net.Mail" Version="1.7.10" />
+    <PackageReference Include="Mail.dll" Version="3.0.21231.1234" />
+    <PackageReference Include="MailKit" Version="2.15.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+    <PackageReference Include="NPoco" Version="5.3.1" />
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="trungpro.png" />
+    <Resource Include="Views\Admin\235304562_426682578720209_4611773534503137783_n.jpg" />
+    <Resource Include="Views\HeThong\anh-gai-xinh-hap-dan-nhieu-nam-gioi.jpg" />
+    <Resource Include="Views\PhuTro\anh-gai-xinh-2k-de-thuong-cute.jpg" />
+    <Resource Include="Views\PhuTro\anh-gai-xinh-mac-kimono-hong-duyen-dang-04-08-2019-1.jpg" />
+    <Resource Include="Views\PhuTro\HinhNen.jpg" />
+    <Resource Include="Views\PhuTro\planet-space-and-stars.jpg" />
+    <Resource Include="Views\PhuTro\trungpro.png" />
+    <Resource Include="Views\TrangChu\anh-gai-xinh-2k-de-thuong-cute.jpg" />
+    <Resource Include="Views\TrangChu\anh-gai-xinh-mac-kimono-hong-duyen-dang-04-08-2019-1.jpg" />
+  </ItemGroup>
+
+</Project>
